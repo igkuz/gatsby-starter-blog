@@ -9,7 +9,6 @@ import { rhythm } from "../utils/typography"
 const BlogIndex2 = ({ data, pageContext, location }) => {
   const siteTitle = `Title`
   const { allPosts: posts } = pageContext;
-  console.log(pageContext, location, data);
 
   // if (posts.length === 0) {
   //   return (

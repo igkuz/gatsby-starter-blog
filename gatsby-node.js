@@ -13,7 +13,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const stkApiUrl = process.env.STK_API_URL;
   const stkApiToken = process.env.STK_API_TOKEN;
 
-  console.log("ENVS: ", stkApiUrl, stkApiToken);
   // Get all markdown blog posts sorted by date
   const get = companyId => axios.get(`${stkApiUrl}/api/v2/posts/?token=${stkApiToken}`);
 
