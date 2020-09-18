@@ -17,6 +17,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         title={post.title}
         description={post.title || post.excerpt}
       />
+      {post.assets.styles.map((style) => {
+        return(
+          <link rel="stylesheet" media="all" href={style}/>
+        )
+      })}
       <article itemScope itemType="http://schema.org/Article">
         <header>
           <h1
@@ -51,6 +56,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <Bio />
         </footer>
       </article>
+      {post.assets.plugins[0]}
+      <script src={post.assets.plugins[0]}></script>
     </Layout>
   )
 }
